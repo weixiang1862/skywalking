@@ -68,7 +68,7 @@ The following steps are the example of config a log dashboard:
 <img src="./grafana-loki-variables1.jpg"/>
 3. Please make sure `service_instance` and `endpoint` variable enabled `Include All` option and set `Custom all value` to blank (typed by space button on the keyboard):
 <img src="./grafana-loki-variables2.jpg"/>
-4. `Tags` variable is a little different from others, for more details, please refer [Ad hoc filters](https://grafana.com/docs/grafana/latest/dashboards/variables/add-template-variables/#add-ad-hoc-filters):
+4. `Tags` variable is a little different from others, for more details, please refer [Ad hoc filters](https://grafana.com/docs/grafana/latest/dashboards/variables/add-template-variables/#add-ad-hoc-filters) docs:
 <img src="./grafana-loki-variables3.jpg"/>
 6. After configure, you can select log query variables on the top of the dashboard:
 <img src="./grafana-loki-variables4.jpg"/>
