@@ -576,3 +576,7 @@ ai-pipeline:
   default:
     uriRecognitionServerAddr: ${SW_AI_PIPELINE_URI_RECOGNITION_SERVER_ADDR:}
     uriRecognitionServerPort: ${SW_AI_PIPELINE_URI_RECOGNITION_SERVER_PORT:17128}
+
+arthas-controller:
+  selector: default
+  default:
