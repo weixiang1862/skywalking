@@ -57,12 +57,14 @@ public class ApplicationStartUp {
                 .of(ApplicationStartUp.class.getClassLoader(), "/zipkin-lens/index.html")
                 .asService();
 
+        OapProxyService oap = new OapProxyService(oapServices);
         final ZipkinProxyService zipkin = new ZipkinProxyService(configuration.zipkinServices());
 
         Server
             .builder()
             .port(port, SessionProtocol.HTTP)
-            .service("/graphql", new OapProxyService(oapServices))
+            .service("/arthas", oap)
+            .service("/graphql", oap)
             .service("/internal/l7check", HealthCheckService.of())
             .service("/zipkin/config.json", zipkin)
             .serviceUnder("/zipkin/api", zipkin)
